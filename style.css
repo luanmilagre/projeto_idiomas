@@ -1,0 +1,156 @@
+/* ====== Estilo base ====== */
+body {
+    font-family: "Segoe UI", sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* ====== Cabeçalho ====== */
+header {
+    background-color: #1a73e8;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+}
+
+header h1 {
+    font-size: 1.6em;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* ====== Hero (banner principal) ====== */
+.hero {
+    background: url("images/banner.jpg") center/cover no-repeat;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+/* Camada escura por cima da imagem para leitura */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+}
+
+.btn {
+    background: #ffb300;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.btn:hover {
+    background: #ffca28;
+}
+
+/* ====== Seção de cursos ====== */
+.cursos {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.card {
+    background: #f8f8f8;
+    width: 280px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* ====== Depoimentos ====== */
+.depoimentos {
+    background: #f1f1f1;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.depoimento-box {
+    background: white;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 600px;
+    border-left: 5px solid #1a73e8;
+}
+
+.aluno {
+    color: #1a73e8;
+    font-weight: bold;
+}
+
+/* ====== Contato ====== */
+.contato {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.contato a.btn {
+    margin-top: 20px;
+}
+
+/* ====== Rodapé ====== */
+footer {
+    background: #1a73e8;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* ====== Responsividade ====== */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+}
